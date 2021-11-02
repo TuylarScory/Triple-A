@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.yyms.adp.aaa.model.YCustomer" />
+	<import class="com.yyms.adp.aaa.model.YServices" />
+	<class name="com.yyms.adp.aaa.model.impl.YCustomerImpl" table="CS_YCustomer">
+		<cache usage="read-write" />
+		<id name="yCustomerId" type="long" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="customerName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customerEmail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customerAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customerNRC" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customerContact" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="payment" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="yServicesId" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.yyms.adp.aaa.model.impl.YServicesImpl" table="CS_YServices">
+		<cache usage="read-write" />
+		<id name="yServicesId" type="long" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="servicesName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="servicesPrice" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="servicesDes" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

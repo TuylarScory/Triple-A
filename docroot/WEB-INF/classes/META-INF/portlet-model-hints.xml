@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.yyms.adp.aaa.model.YCustomer">
+		<field name="uuid" type="String" />
+		<field name="yCustomerId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="customerName" type="String" />
+		<field name="customerEmail" type="String" />
+		<field name="customerAddress" type="String" />
+		<field name="customerNRC" type="String" />
+		<field name="customerContact" type="String" />
+		<field name="payment" type="String" />
+		<field name="yServicesId" type="long" />
+	</model>
+	<model name="com.yyms.adp.aaa.model.YServices">
+		<field name="uuid" type="String" />
+		<field name="yServicesId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="servicesName" type="String" />
+		<field name="servicesPrice" type="String" />
+		<field name="servicesDes" type="String" />
+	</model>
+</model-hints>
